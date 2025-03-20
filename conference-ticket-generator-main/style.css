@@ -1,0 +1,162 @@
+body {
+  background-image: url("assets/images/background-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+section {
+  padding: 20px;
+  color: #e0e0e0;
+  height: auto;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.btn {
+  width: 100%;
+  max-width: 160px;
+  height: 40px;
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: coral;
+}
+
+/* Drop de imagem */
+.drop-zone {
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s;
+  margin: 20px auto;
+}
+
+.drop-zone.dragover {
+  background-color: #e1f5fe;
+  border-color: #2196f3;
+}
+
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+}
+
+.preview-img {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  section {
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .drop-zone {
+    width: 80%;
+    height: 150px;
+    margin: 10px auto;
+  }
+
+  .preview-img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .btn {
+    max-width: 140px;
+    height: 35px;
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 475px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  section {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .drop-zone {
+    width: 90%;
+    height: 120px;
+  }
+
+  .preview-img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .btn {
+    max-width: 120px;
+    height: 30px;
+    font-size: 0.8rem;
+    padding: 0 6px;
+  }
+}

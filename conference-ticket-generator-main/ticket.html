@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ticket.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Obrigado pela compra, <span id="titulo"></span></h1>
+
+    <h2>Ingresso enviado para: <span id="subtitulo"></span></h2>
+
+    <section class="quadrado">
+      <div class="ticket">
+        <h1 class="tituloIngresso">Ingresso</h1>
+        <p><strong>Nome:</strong> <span id="nome"></span></p>
+        <p><strong>E-mail:</strong> <span id="email"></span></p>
+        <p><strong>Usuário GitHub:</strong> <span id="usuario"></span></p>
+        <img id="imagem" src="" alt="Imagem do usuário" />
+        <p><strong>Data da compra:</strong> <span id="dataCompra"></span></p>
+      </div>
+
+      <br />
+      <br />
+    </section>
+    <button class="btn">
+      <a href="index.html">Voltar ao cadastro</a>
+    </button>
+
+    <script>
+      // Recuperar os dados do Local Storage
+      const ticketData = JSON.parse(localStorage.getItem("ticketData")) || {};
+
+      const data = new Date();
+      const dia = String(data.getDate()).padStart(2, "0");
+      const mes = String(data.getMonth() + 1).padStart(2, "0");
+      const ano = data.getFullYear();
+      const dataAtual = `${dia}/${mes}/${ano}`;
+
+      // Preencher os elementos com os dados
+      document.getElementById("titulo").textContent =
+        ticketData.nome || "Obrigado pela compra, ";
+      document.getElementById("subtitulo").textContent =
+        ticketData.email || "Ingresso enviado para: ";
+      document.getElementById("nome").textContent =
+        ticketData.nome || "Não informado";
+      document.getElementById("email").textContent =
+        ticketData.email || "Não informado";
+      document.getElementById("usuario").textContent =
+        ticketData.usuario || "Não informado";
+      document.getElementById("dataCompra").textContent = dataAtual;
+      if (ticketData.imagem) {
+        document.getElementById("imagem").src = ticketData.imagem;
+      }
+    </script>
+  </body>
+</html>

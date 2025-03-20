@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Bem vindo ao gerador de tickets!</h1>
+
+    <h2>Preencha com seus dados e garanta seu ingresso para o show!</h2>
+
+    <section class="quadrado">
+      <div class="drop-zone" id="dropZone">
+        <!-- classe para arrastar, e id para referenciar no JS -->
+        Arraste sua imagem aqui
+      </div>
+      <div class="preview-container" id="preview"></div>
+      <!-- classe para pré visualização -->
+
+      <div class="conteiner">
+        Nome completo
+        <input class="Nome" />
+      </div>
+      <br />
+      <div class="conteiner">
+        E-mail
+        <input class="Email" />
+        <br />
+
+        Usuário GitHub
+        <input class="Usuario" />
+      </div>
+
+      <br />
+      <br />
+
+      <button class="btn">
+        <a href="index.html">Gerar meu ticket</a>
+      </button>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
