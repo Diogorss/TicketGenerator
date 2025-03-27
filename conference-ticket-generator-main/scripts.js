@@ -83,6 +83,11 @@ function validaEmail() {
     console.log("Por favor, preencha o campo de email");
     emailInput.style.border = "2px solid red";
     return false;
+  }
+  if (!emailInput.value.includes("@")) {
+    console.log("Por favor, insira um email válido");
+    emailInput.style.border = "2px solid red";
+    return false;
   } else {
     emailInput.style.border = "";
     return true;
@@ -136,6 +141,10 @@ btn.addEventListener("click", (e) => {
     };
     reader.readAsDataURL(images[0]);
   } else {
-    alert("Por favor, preencha todos os campos");
+    if (!emailInput.value.includes("@")) {
+      alert("Por favor, insira um email válido");
+    } else {
+      alert("Por favor, preencha todos os campos");
+    }
   }
 });
