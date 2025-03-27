@@ -141,10 +141,6 @@ btn.addEventListener("click", (e) => {
     };
     reader.readAsDataURL(images[0]);
   } else {
-    if (!emailInput.value.includes("@")) {
-      alert("Por favor, insira um email válido");
-    } else {
-      alert("Por favor, preencha todos os campos");
-    }
+    alert("Por favor, preencha todos os campos corretamente");
   }
 });
