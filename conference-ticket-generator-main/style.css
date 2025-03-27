@@ -6,6 +6,8 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  padding: 0;
+  height: 100%;
 }
 
 h1 {
@@ -113,6 +115,31 @@ section {
 }
 
 /* Media Queries para Responsividade */
+@media (max-width: 980px) {
+  section {
+    max-width: 90%; /* Ajusta para 90% da largura da tela */
+    margin: 20px auto;
+    padding: 25px;
+  }
+
+  .drop-zone {
+    width: 85%;
+    height: 180px;
+    margin: 15px auto;
+  }
+
+  .preview-img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+
+  .btn {
+    max-width: 150px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;

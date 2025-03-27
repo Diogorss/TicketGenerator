@@ -6,6 +6,8 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  padding: 0;
+  height: 100%;
 }
 
 h1 {
